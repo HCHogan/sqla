@@ -86,7 +86,7 @@ where
     }
 }
 
-pub trait Selectable: Sized {
+pub trait Selectable {
     type Src;
     fn select<F, Proj>(self, f: F) -> Query<<Proj as Projection>::Row>
     where

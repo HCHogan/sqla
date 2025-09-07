@@ -154,6 +154,7 @@ where
     fn eq(self, rhs: Rhs) -> Expr<bool, NotNull, Self::Agg>;
     fn ne(self, rhs: Rhs) -> Expr<bool, NotNull, Self::Agg>;
 }
+
 impl<L, R> EqOps<R> for L
 where
     L: AsExpr,
@@ -274,7 +275,6 @@ where
     type Out = <() as ValueOf<Null, Ty>>::Out;
 }
 
-// Projection over tuples (up to arity 4)
 pub trait Projection {
     type Row;
     fn into_vec(self) -> Vec<AstExpr>;

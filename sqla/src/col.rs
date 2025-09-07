@@ -19,7 +19,7 @@ impl<Table, SqlTy, Null, ColTag> Clone for Col<Table, SqlTy, Null, ColTag> {
 impl<Table, SqlTy, Null, ColTag> Col<Table, SqlTy, Null, ColTag>
 where
     Table: TableMeta,
-    ColTag: super::col::ColumnMeta,
+    ColTag: ColumnMeta,
 {
     pub fn expr(&self) -> Expr<SqlTy, Null, NonAgg> {
         Expr {
