@@ -1,0 +1,9 @@
+[package]
+name = "sqla"
+version = "0.1.0"
+edition = "2024"
+
+
+[dependencies]
+sqla-derive = { path = "../sqla-derive" }
+thiserror = "1"
